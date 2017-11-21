@@ -1,0 +1,23 @@
+thetas: parameters
+
+How do we choose these thetas? i.e. how do we come up with a straight line that best represents our training set.
+
+Idea: choose thetas so that h is close to y for our training samples (x,y)
+
+minimize average sum for all samples i from 0 to m
+((h(x)(i) - y(i)) ^ 2)/ (2 * m)
+
+The above expression is called the cost function denoted by J(theta0, theta1). This cost function is called sqaured
+error function. This is most ideal choice for most linear regression problems.
+
+Intuition 1
+-----------
+
+Plot J by considering theta0 as 0 and varying theta1 i.e. y intercept on the line is always zero.
+
+Intuition 2
+-----------
+
+Now consider both theta1 and theta2. Contour plots.
+
+

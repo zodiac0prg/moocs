@@ -1,0 +1,38 @@
+Linear regression with one variable.
+
+Supervised learning: you are given the "right answers". Eg. housing prices in a city. This is also a "Regression
+problem": predict real-valued output.
+
+The right answers are called training set.
+
+Notations:
+m : number of training examples
+x's : input variables / features
+y's : output variables / target
+
+(x,y) : single training sample
+[x(i), y(i)] : is the ith training sample
+
+					Training set
+						|
+						|
+					learning algorithm
+						|
+						|
+		size of house-> h -> Estimated price
+			x						y
+
+h: hypothesis
+h maps from x's to y's
+
+How do we represent h?
+
+h(theta)(x) = (theta0) + (theta1)x
+shorthand : h(x)
+
+or in other words: an eqn of a straight line:
+
+Why linear? use this as a base for learning more complex learning algos.
+
+This is also known as univariate linear regression.
+
