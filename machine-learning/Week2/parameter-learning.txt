@@ -1,0 +1,79 @@
+Gradient descent
+-----------------
+
+can be used on function J(theta0, theta1,.....thetaN)
+and minimize J for theta0....thetaN
+
+we are only considering two variables: theta0, theta1
+
+Idea:
+Start with some theta0, theta1 and then keep changing to reduce J to what is (hopefully) a minimum.
+
+depending on where you start from, you might end up with different local minimums.
+
+":=" is an assignment operator
+
+alpha :  learning rate, controls how big a step we take in the gradient descent
+derivate of J against thetaj
+
+Repeat until convergence {
+	thetaj := thetaj - alpha * (derivate of J against thetaj) { for j = 0 and j = 1)
+}
+
+Correct implementation (Simultaneous update)
+temp0 := theta0 - alpha * (derivate)
+temp1 := theta1 - alpha * (derivate)
+theta0 := temp0
+theta1 := temp1
+
+Incorrect:
+temp0 := theta0 - alpha * (derivate)
+theta0 := temp0
+temp1 := theta1 - alpha * (derivate)
+theta1 := temp1
+
+Why incorrect? derivate would be using "updated" value of theta0 for computing temp1
+
+Gradient descent intuition
+--------------------------
+
+Learning rate: alpha is always positive
+
+Consider J to be a function of one variable (say theta1). In the earlier lecture, we saw that the J for a single variable looks like
+a parabolic function.
+
+If we were to "start" by picking a point on the right side of the parabola minimum:
+the derivate term (slope of the tangent at that point) would be positive. And since alpha is also positive,
+
+theta1 =  theta1 - (some positive number)
+
+i.e. the net effect would be to reduce theta1 (move theta1 to the left towards the minimum). which is what we wanted to
+do anyway.
+
+The same argument can be made if we were to "start" by picking a point on the left side of the parabola minimum.
+
+theta1 = theta1 - (some negative number)
+
+i.e. move theta1 to the right towards the minimum.
+
+So that explains why derivate is a good approx to use for updates.
+
+Now, lets take a look at alpha i.e. the learning rate.
+
+If alpha is too small, gradient descent can be very slow (many more steps to converge to minimum)
+
+If alpha is too large, gradient descent can overshoot the minimum....may fail to converge or even diverge...
+
+Now what if the theta1 was already at a local minimum, what would gradient descent do then?
+
+Ans: it would leave theta1 as is...because derivate would result in a zero...
+
+As we approach the local minimum, gradient descent will automatically take smaller steps. So, no need to decrease alpha
+over time. You can leave it fixed.
+
+Gradient descent for Linear regression
+---------------------------------------
+
+The J function is a convex function and therefore the only minimum you get would be the "global minimum". So there is no
+possibility of getting "stuck" at a local minimum.
+
