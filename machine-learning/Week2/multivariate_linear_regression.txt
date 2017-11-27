@@ -1,0 +1,21 @@
+Multiple features
+------------------
+House prices example:
+Now have more features (information) regarding each data-point.
+
+n = number of features
+m = number of samples
+
+x^(i) : features of the ith training sample : nth dim feature vector
+x(j) ^ (i) : jth feature of the ith training sample
+
+
+hypothesis now changes to:
+h (theta)(x) = theta0(x)(0) +  theta1(x)(1) + theta2(x)(2)+...theta(n)(x)(n)
+
+where (x)(0) = 1
+
+h = theta'X
+
+where theta' = transpose of theta (which is a 1 x (n+1) row vector)
+and X = is a ((n+1) x 1) column vector.
