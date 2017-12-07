@@ -1,0 +1,29 @@
+
+Overfitting: If we have too many featues, the learned hypothesis may fit
+the training set very well, but fail to generalize to new examples
+(shitty performance on predictions for new examples)
+
+other term: hypothesis with high-variance
+
+Flip side: underfitting or hypothesis with high-bias.
+
+How do we overcome this:
+
+1) Reduce number of features:
+	- Manually select which features to keep
+	- Model selection algorithm
+	disadv: might be losing out on information that could be potentially useful.
+
+2) Regularization
+	- Keep all the features, but reduce magnitude of parameters thetaj
+	- Works well with problems with large number of features
+
+
+Regularization
+--------------
+
+regularized cost function =  old cost function + lambda * (sum from j = 1 to 100) [thethaj]
+
+start out with the higher order polynomial and then optimize till we get a good fitting..
+lower order polynomial.
+
