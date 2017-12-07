@@ -1,0 +1,41 @@
+Classification
+--------------
+
+Consider the problem of classifying if a tumor is malignant or not based on the input of tumor size.
+
+At first, it seems like the linear regression model can be used as a classifier. But there are problems:
+
+1) It might work for a particular example, but not all examples.
+2) For a binary classification problem (such as this tumor example), where the output is usually 0 or 1,
+the prediction h(x) could give values that are < 0 or > 1. This is odd and not ideal.
+
+For this reason, linear regression does not help and we would need a different model.
+
+::Introducing Logistic regression.
+
+oddly termed "regression", although logistic regression is really a classifier.
+
+Hypothesis Representation
+-------------------------
+
+Logistic regression uses a sigmoid function...
+g(n) = 1 / (1 + e^(-n))
+
+where n = (theta)' * x;
+
+the sigmoid function asymptotes to 1 as n tends to infinity and asymptotes to 0 as n tends to (-infinity).
+
+Logistic regression estimates the probability that y = 1 on an input x.
+
+h(theta)(x) = probability that y = 1, given x, parameterized by 0.
+
+Decision boundary
+------------------
+
+h (theta)(x) >= 0.5 , then y = 1
+else y = 0
+
+so for the case of a sigmoid function, g (theta' * x) >= 0.5 when (theta' * x) >= 0
+
+The decision boundary are based on the paramter theta and NOT on the training set itself.
+
