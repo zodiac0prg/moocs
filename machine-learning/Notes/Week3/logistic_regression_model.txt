@@ -30,5 +30,38 @@ When y = 0
 1) when y =0, h(x) = 0, learning algo nailed it
 2) when y = 0 and h(x) = 1 (worst prediction), cost tends to infinity
 
+Simplified Cost function
+-------------------------
+incorporate y variable into the cost function.
+
+Gradient descent
+----------------
+
+Addressing the question: how do we come up with theta?
+
+the update rule for theta is identical to that of what was used for linear
+regression. The only difference is that h(x) definition is different
+for the two models....i.e
+
+h(x) = theta' * x (for linear regression)
+
+h(x) = g( theta' * x) where g() is the sigmoid function (for logistic regression)
+
+
+Advanced Optimization
+----------------------
+Gradient descent is not the only option for optimization.
+
+Other options:
+1) Conjugate gradient
+2) BFGS (?)
+3) L-BFGS (?)
+
+Advantages:
+1) Dont need to supply learning rate, alpha for these methods (computes learning rate automatically)
+2) Converges much faster than graident descent.
+
+Cons:
+1) Much more complex than gradient descent. (use already existing libraries instead of implementing your own)
 
 

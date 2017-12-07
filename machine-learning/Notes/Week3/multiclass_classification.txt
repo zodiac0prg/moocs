@@ -1,0 +1,19 @@
+Example:
+Email foldering/tagging: Work, Friends, Family, Hobby
+Medical diagnoses: Not ill, Cold, Flu
+Weather: Sunny, Cloudy, Rain, Snow
+
+y can take a small number of discrete values as opposed to just binary.
+
+Each of these discrete values are called classes.
+
+One vs All (One vs Rest)
+------------------------
+
+Idea is to apply binary logistic regression classifier repeatedly
+by consider each class as a positive class and the remaining values as
+negative class.
+
+On a new input x, to make a prediction, pick the class i that maximizes
+
+max (for i) h (theta) (x) (for that classifier i)
