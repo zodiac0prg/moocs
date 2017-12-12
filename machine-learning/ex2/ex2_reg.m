@@ -67,6 +67,9 @@ lambda = 1;
 % regression
 [cost, grad] = costFunctionReg(initial_theta, X, y, lambda);
 
+size(cost)
+size(grad)
+
 fprintf('Cost at initial theta (zeros): %f\n', cost);
 fprintf('Expected cost (approx): 0.693\n');
 fprintf('Gradient at initial theta (zeros) - first five values only:\n');
@@ -107,7 +110,7 @@ pause;
 initial_theta = zeros(size(X, 2), 1);
 
 % Set regularization parameter lambda to 1 (you should vary this)
-lambda = 1;
+lambda = 100;
 
 % Set Options
 options = optimset('GradObj', 'on', 'MaxIter', 400);
