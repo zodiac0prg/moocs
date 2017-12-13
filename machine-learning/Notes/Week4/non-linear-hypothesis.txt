@@ -1,0 +1,25 @@
+Non-linear classification
+-------------------------
+
+For more number of features and quadratic hypothesis, you will have almost O(n^2)
+features...
+
+This will result in overfitting, and also computationally this would be very challenging.
+
+Neural networks
+---------------
+
+background: neurons and the brain
+
+Neuron model: Logistic unit
+
+x0 (bias unit) (..implied =1)
+theta : parameters of the model (aka weights of the model)
+
+The neural network could consist of multiple layers...
+the first layer is the input layer, the last layer is the output layer..
+the intermediate layer are called hidden layer(s).
+
+a(i)(j) activation of unit i in layer j
+
+theta(j)'s dimension is s(j+1) x (s(j) + 1)
